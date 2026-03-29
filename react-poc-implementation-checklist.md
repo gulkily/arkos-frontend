@@ -69,7 +69,7 @@ Completion check:
 
 - the app renders a blank or minimally styled shell with no compile errors
 
-### Phase 3: Create `DeskScene`
+### Phase 3: Create `DeskScene` [completed]
 
 Checklist:
 

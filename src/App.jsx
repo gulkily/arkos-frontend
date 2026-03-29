@@ -1,7 +1,9 @@
+import DeskScene from "./components/DeskScene";
+
 export default function App() {
   return (
     <main className="app-shell">
-      <section className="scene-stage" aria-label="Desk scene stage" />
+      <DeskScene notifications={[]} />
     </main>
   );
 }
