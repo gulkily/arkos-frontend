@@ -238,6 +238,17 @@ body {
   height: 14rem;
 }
 
+.desk-scene__notification-layer {
+  position: absolute;
+  top: 14%;
+  right: 8%;
+  width: min(24vw, 16rem);
+  height: min(34vh, 18rem);
+  border-radius: 1.2rem;
+  border: 1px dashed rgba(255, 255, 255, 0.14);
+  background: rgba(11, 14, 24, 0.12);
+}
+
 .lamp-head,
 .lamp-arm,
 .lamp-base {
@@ -338,6 +349,13 @@ body {
   .desk-scene__shelf,
   .desk-scene__lamp {
     display: none;
+  }
+
+  .desk-scene__notification-layer {
+    top: 8%;
+    right: 6%;
+    width: 32vw;
+    height: 20vh;
   }
 
   .desk-scene__window {

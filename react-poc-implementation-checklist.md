@@ -98,7 +98,7 @@ Completion check:
 - a viewer can clearly see that the app is no longer just scaffold output
 - the scene looks intentional enough to present as task progress
 
-### Phase 5: Prepare for future notification work
+### Phase 5: Prepare for future notification work [completed]
 
 Checklist:
 

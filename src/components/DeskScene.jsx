@@ -24,6 +24,8 @@ export default function DeskScene({ notifications }) {
           <span className="lamp-arm" />
           <span className="lamp-base" />
         </div>
+        {/* Future notification UI can attach here without restructuring the scene. */}
+        <div className="desk-scene__notification-layer" aria-hidden="true" />
         <div className="desk-scene__keyboard" aria-hidden="true" />
         <div className="desk-scene__mug" aria-hidden="true" />
         <div className="desk-scene__desk" aria-hidden="true" />
