@@ -94,7 +94,7 @@ Completion check:
 
 - a local operator can complete a prompt and response round trip
 
-### Phase 5: Add mediation if required
+### Phase 5: Add mediation if required [completed]
 
 Checklist:
 

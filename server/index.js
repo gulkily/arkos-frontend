@@ -43,6 +43,27 @@ async function resolveModel() {
   }
 }
 
+async function listModels() {
+  const controller = new AbortController();
+  const timeout = setTimeout(() => controller.abort(), queryTimeoutMs);
+
+  try {
+    const response = await fetch(`${apiBase}/models`, {
+      signal: controller.signal,
+    });
+
+    const payload = await response.json().catch(() => null);
+
+    if (!response.ok) {
+      throw new Error(payload?.error?.message ?? `Model lookup failed with status ${response.status}`);
+    }
+
+    return payload?.data ?? [];
+  } finally {
+    clearTimeout(timeout);
+  }
+}
+
 async function queryModel(prompt) {
   const model = await resolveModel();
   const controller = new AbortController();
@@ -92,6 +113,22 @@ app.get("/api/health", (_request, response) => {
     ok: true,
     apiBase,
   });
+});
+
+app.get("/api/models", async (_request, response) => {
+  try {
+    const models = await listModels();
+
+    return response.json({
+      data: models,
+    });
+  } catch (error) {
+    const message = error instanceof Error ? error.message : "Model lookup failed.";
+
+    return response.status(502).json({
+      error: message,
+    });
+  }
 });
 
 app.post("/api/query", async (request, response) => {
