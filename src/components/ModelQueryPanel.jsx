@@ -50,28 +50,44 @@ export default function ModelQueryPanel() {
     }
   }
 
+  function handlePromptKeyDown(event) {
+    if (event.key === "Enter" && (event.ctrlKey || event.metaKey) && !isLoading) {
+      event.preventDefault();
+      event.currentTarget.form?.requestSubmit();
+    }
+  }
+
   return (
     <section className="query-panel" aria-label="Model query panel">
       <div className="query-panel__header">
         <p className="query-panel__eyebrow">Live Query</p>
-        <h1>Prompt the model from the frontend shell.</h1>
+        <h1>Query the model from the ARKOS frontend.</h1>
+        <p className="query-panel__intro">
+          The workspace is now optimized for prompt drafting and response reading. Use Ctrl+Enter to submit quickly.
+        </p>
       </div>
 
       <form className="query-panel__form" onSubmit={handleSubmit}>
-        <label className="query-panel__label" htmlFor="prompt">
-          Prompt
-        </label>
-        <textarea
-          id="prompt"
-          className="query-panel__input"
-          value={prompt}
-          onChange={(event) => setPrompt(event.target.value)}
-          rows={6}
-          placeholder="Ask the model something useful."
-        />
-        <button className="query-panel__submit" type="submit" disabled={isLoading}>
-          {isLoading ? "Querying..." : "Send Prompt"}
-        </button>
+        <div className="query-panel__prompt-block">
+          <label className="query-panel__label" htmlFor="prompt">
+            Prompt
+          </label>
+          <textarea
+            id="prompt"
+            className="query-panel__input"
+            value={prompt}
+            onChange={(event) => setPrompt(event.target.value)}
+            onKeyDown={handlePromptKeyDown}
+            rows={10}
+            placeholder="Ask the model something useful."
+          />
+        </div>
+        <div className="query-panel__actions">
+          <p className="query-panel__hint">Enter adds a new line. Ctrl+Enter submits.</p>
+          <button className="query-panel__submit" type="submit" disabled={isLoading}>
+            {isLoading ? "Querying..." : "Send Prompt"}
+          </button>
+        </div>
       </form>
 
       <section className="query-panel__response" aria-live="polite">

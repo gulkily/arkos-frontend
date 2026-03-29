@@ -3,6 +3,7 @@ export default function DeskScene({ notifications, children }) {
     <section className="scene-stage" aria-label="Desk scene stage">
       <div className="desk-scene">
         <div className="desk-scene__sky" aria-hidden="true" />
+        <div className="desk-scene__workspace">{children}</div>
         <div className="desk-scene__window" aria-hidden="true">
           <div className="desk-scene__sun" />
           <div className="desk-scene__grid" />
@@ -24,7 +25,6 @@ export default function DeskScene({ notifications, children }) {
           <span className="lamp-arm" />
           <span className="lamp-base" />
         </div>
-        <div className="desk-scene__notification-layer">{children}</div>
         <div className="desk-scene__keyboard" aria-hidden="true" />
         <div className="desk-scene__mug" aria-hidden="true" />
         <div className="desk-scene__desk" aria-hidden="true" />
