@@ -83,7 +83,7 @@ Completion check:
 - `DeskScene` renders from `App`
 - there are no prop-related errors or warnings
 
-### Phase 4: Add the placeholder visual design
+### Phase 4: Add the placeholder visual design [completed]
 
 Checklist:
 
