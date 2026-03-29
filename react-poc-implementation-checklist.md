@@ -56,7 +56,7 @@ Completion check:
 
 - `npm start` serves a default React page successfully
 
-### Phase 2: Replace the default app shell
+### Phase 2: Replace the default app shell [completed]
 
 Checklist:
 
