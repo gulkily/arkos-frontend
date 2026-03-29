@@ -108,7 +108,7 @@ Completion check:
 
 - browser clients do not depend directly on the raw inference endpoint
 
-### Phase 6: Document the working private runtime
+### Phase 6: Document the working private runtime [completed]
 
 Checklist:
 
