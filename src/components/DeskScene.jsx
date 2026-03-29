@@ -1,4 +1,4 @@
-export default function DeskScene({ notifications }) {
+export default function DeskScene({ notifications, children }) {
   return (
     <section className="scene-stage" aria-label="Desk scene stage">
       <div className="desk-scene">
@@ -24,8 +24,7 @@ export default function DeskScene({ notifications }) {
           <span className="lamp-arm" />
           <span className="lamp-base" />
         </div>
-        {/* Future notification UI can attach here without restructuring the scene. */}
-        <div className="desk-scene__notification-layer" aria-hidden="true" />
+        <div className="desk-scene__notification-layer">{children}</div>
         <div className="desk-scene__keyboard" aria-hidden="true" />
         <div className="desk-scene__mug" aria-hidden="true" />
         <div className="desk-scene__desk" aria-hidden="true" />
