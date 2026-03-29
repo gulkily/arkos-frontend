@@ -112,6 +112,14 @@ Error body:
 
 Keep this interface narrow until a second use case forces expansion.
 
+## Execution Workflow
+
+- implement this phase on a dedicated branch rather than directly on `main`
+- complete one phase at a time in order
+- update this plan or its follow-on checklist after each phase to mark that phase complete
+- make a commit after each phase is finished so progress is easy to review and recover
+- keep commit scope aligned with the phase boundaries in this document
+
 ## Implementation Phases
 
 ### Phase 1: Confirm backend call strategy
