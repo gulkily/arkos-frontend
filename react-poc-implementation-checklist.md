@@ -111,7 +111,7 @@ Completion check:
 
 - the next task can add notification UI without refactoring the whole shell
 
-### Phase 6: Verify the acceptance path
+### Phase 6: Verify the acceptance path [completed]
 
 Checklist:
 
