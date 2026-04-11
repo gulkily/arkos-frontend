@@ -47,4 +47,14 @@ describe("NotificationPopup", () => {
     expect(screen.getByText("No active notifications.")).toBeInTheDocument();
     expect(screen.getByText("0 active")).toBeInTheDocument();
   });
+
+  it("renders a restore action when one is provided", () => {
+    const onRestore = vi.fn();
+
+    render(<NotificationPopup notifications={[]} onRestore={onRestore} />);
+
+    fireEvent.click(screen.getByText("Restore mock notifications"));
+
+    expect(onRestore).toHaveBeenCalledTimes(1);
+  });
 });

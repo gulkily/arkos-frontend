@@ -16,5 +16,9 @@ describe("App", () => {
 
     expect(screen.getByText("0 notifications loaded")).toBeInTheDocument();
     expect(screen.getByText("No active notifications.")).toBeInTheDocument();
+    fireEvent.click(screen.getByText("Restore mock notifications"));
+
+    expect(screen.getByText("3 notifications loaded")).toBeInTheDocument();
+    expect(screen.getByText("Task status changed")).toBeInTheDocument();
   });
 });

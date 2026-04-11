@@ -13,7 +13,7 @@ function getNotificationTone(status) {
   }
 }
 
-export default function NotificationPopup({ notifications = [], onDismiss }) {
+export default function NotificationPopup({ notifications = [], onDismiss, onRestore }) {
   const [visibleNotifications, setVisibleNotifications] = useState(notifications);
 
   useEffect(() => {
@@ -36,7 +36,14 @@ export default function NotificationPopup({ notifications = [], onDismiss }) {
       </div>
 
       {visibleNotifications.length === 0 ? (
-        <p className="notification-popup__empty">No active notifications.</p>
+        <div className="notification-popup__empty-state">
+          <p className="notification-popup__empty">No active notifications.</p>
+          {onRestore ? (
+            <button type="button" className="notification-popup__restore" onClick={onRestore}>
+              Restore mock notifications
+            </button>
+          ) : null}
+        </div>
       ) : (
         <ul className="notification-popup__list">
           {visibleNotifications.map((notification) => (

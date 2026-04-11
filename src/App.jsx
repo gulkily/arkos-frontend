@@ -36,12 +36,20 @@ export default function App() {
     );
   }
 
+  function handleRestoreNotifications() {
+    setNotifications(initialNotifications);
+  }
+
   return (
     <main className="app-shell">
       <DeskScene
         notifications={notifications}
         notificationOverlay={
-          <NotificationPopup notifications={notifications} onDismiss={handleDismissNotification} />
+          <NotificationPopup
+            notifications={notifications}
+            onDismiss={handleDismissNotification}
+            onRestore={handleRestoreNotifications}
+          />
         }
       >
         <ModelQueryPanel />
