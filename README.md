@@ -107,6 +107,7 @@ This uses Vite's preview server and is useful for static frontend checks. It doe
 | Command | Description |
 | --- | --- |
 | `npm start` | Runs the Express API and Vite dev server together |
+| `npm test` | Runs the Vitest component/integration checks |
 | `npm run api` | Starts the Express server only |
 | `npm run build` | Builds the frontend into `dist/` |
 | `npm run preview` | Serves the built frontend with Vite preview |
@@ -148,7 +149,7 @@ The repo also includes project-specific runbooks and helper scripts:
 ## Current Limits
 
 - The UI is currently a single-page prompt workspace with no routing or authentication
-- There is no automated test suite configured in `package.json`
+- Test coverage is currently limited to the notification popup and mounted app notification flow
 - `NotificationPopup` currently uses mock data in the local app and is not wired to real-time backend events
 
 ## License

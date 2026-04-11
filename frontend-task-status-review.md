@@ -16,6 +16,7 @@ What is done:
 - `NotificationPopup` is exportable from the repo barrel file (`src/components/index.js:3`)
 - production build passes with `npm run build`
 - `NotificationPopup` is now imported into the live app path and mounted with mock data from `App`
+- automated tests now cover the mounted `App` path and the empty-notifications state
 
 What is still missing or weak:
 
@@ -40,6 +41,7 @@ What is done:
 - it renders a visible list with mock notification data
 - each item has dismiss functionality
 - the local app path mounts the popup so `npm start` demonstrates the feature
+- tests verify repeated dismisses down to the empty state
 
 What is missing:
 

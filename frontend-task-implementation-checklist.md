@@ -29,7 +29,7 @@ Exit criteria:
 
 - [x] run `npm start` and verify the app loads through the normal local workflow
 - [ ] verify `DeskScene` renders without browser console errors
-- [ ] verify the `notifications={[]}` path is exercised without runtime warnings
+- [x] verify the `notifications={[]}` path is exercised without runtime warnings
 - [x] record the verification result in a repo doc if any non-obvious behavior appears
 
 Exit criteria:
@@ -67,7 +67,7 @@ Exit criteria:
 
 - [x] add a dismiss button for each notification
 - [x] implement removal behavior so dismissing an item removes it from the rendered list
-- [ ] verify repeated dismisses work until the list is empty
+- [x] verify repeated dismisses work until the list is empty
 - [x] ensure dismiss behavior does not mutate props directly
 
 Exit criteria:
@@ -79,7 +79,7 @@ Exit criteria:
 - [x] add minimal styling so the popup is readable on top of `DeskScene`
 - [x] choose a placement that does not interfere with the current main panel
 - [ ] verify the popup remains readable with multiple notifications
-- [ ] verify the empty state does not create awkward unused chrome if the component is mounted with no items
+- [x] verify the empty state does not create awkward unused chrome if the component is mounted with no items
 
 Exit criteria:
 
@@ -99,6 +99,7 @@ Exit criteria:
 ### Phase 8: Export and verification
 
 - [x] confirm `NotificationPopup` remains exported from `src/components/index.js`
+- [x] run `npm test`
 - [x] run `npm run build`
 - [x] run `npm start`
 - [ ] verify no browser console errors after mounting the popup
@@ -142,3 +143,4 @@ Exit criteria:
 - Storybook is optional based on the task wording; `npm start` with mock data is enough to satisfy the stated acceptance test
 - the existing `ModelQueryPanel` is not part of these tasks, so avoid broad UI refactors unless popup placement forces a small adjustment
 - direct browser console inspection is still pending because this terminal-only pass did not include a browser session
+- automated coverage now exists for popup rendering, dismiss behavior, repeated dismiss to empty state, and the `App` integration path
