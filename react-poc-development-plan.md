@@ -1,5 +1,7 @@
 # React PoC Development Plan
 
+Historical note: this document covers the initial shell build. `NotificationPopup` was deferred in this phase but is now tracked separately in `frontend-task-implementation-checklist.md`.
+
 This document expands on `react-poc-plan.md` and turns it into a development-oriented execution plan for the first ARKOS frontend proof-of-concept.
 
 ## Objective

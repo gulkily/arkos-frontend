@@ -1,5 +1,7 @@
 # React PoC Plan
 
+Historical note: this document describes the original shell-only PoC scope. `NotificationPopup` has since been implemented separately; see `frontend-task-implementation-checklist.md` and `frontend-task-status-review.md` for current status.
+
 The findings document in this repo is deployment-focused, but it gives one useful constraint for this PoC: treat the frontend as a separate shell and do not assume any real backend, auth, or routing work yet. Given the assigned task, this proof-of-concept should focus on establishing the minimal React host app, mounting `DeskScene`, and proving the local developer loop works cleanly.
 
 ## Existing Infrastructure Note

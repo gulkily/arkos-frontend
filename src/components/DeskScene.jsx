@@ -1,9 +1,10 @@
-export default function DeskScene({ notifications, children }) {
+export default function DeskScene({ notifications, children, notificationOverlay = null }) {
   return (
     <section className="scene-stage" aria-label="Desk scene stage">
       <div className="desk-scene">
         <div className="desk-scene__sky" aria-hidden="true" />
         <div className="desk-scene__workspace">{children}</div>
+        <div className="desk-scene__overlay">{notificationOverlay}</div>
         <div className="desk-scene__window" aria-hidden="true">
           <div className="desk-scene__sun" />
           <div className="desk-scene__grid" />

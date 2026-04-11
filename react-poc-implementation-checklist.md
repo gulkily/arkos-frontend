@@ -1,5 +1,7 @@
 # React PoC Implementation Checklist
 
+Historical note: this checklist reflects the original shell-first pass. `NotificationPopup` work now lives in `frontend-task-implementation-checklist.md`.
+
 This document translates `react-poc-development-plan.md` into a concrete build checklist for the first development pass.
 
 ## Implementation Goal
